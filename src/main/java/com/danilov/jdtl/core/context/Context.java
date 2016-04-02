@@ -30,7 +30,7 @@ public class Context {
 
     @Nonnull
     public String getLocalPath(final String path) {
-        return path;
+        return projectPath + path;
     }
 
     public void setFileHandler(final FileHandler fileHandler) {

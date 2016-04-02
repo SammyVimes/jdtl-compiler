@@ -9,8 +9,8 @@ import java.util.regex.Pattern;
  */
 public class FunctionBlock {
 
-    private static final String fnPattern = "\\$\\{(\\w+)([ ]?(\\w+)=\"([a-zA-Z0-9/\\.]+)\")*}";
-    private static final String fnValuesPattern = "(\\w+)=\"([a-zA-Z0-9/\\.]+)\"";
+    private static final String fnPattern = "\\$\\{(\\w+)([ ]?(\\w+)=\"(.+?)\")*}";
+    private static final String fnValuesPattern = "(\\w+)=\"(.+?)\"";
 
     private Map<String, String> keyValueMap = new HashMap<>();
     private String raw;

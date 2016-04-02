@@ -54,7 +54,7 @@ public class FunctionBlockTest {
         Assert.assertEquals(block.getFunctionName(), "myFunc");
         Map<String, String> keyValueMap = block.getKeyValueMap();
         Assert.assertEquals(new HashSet<>(keyValueMap.keySet()), new HashSet<String>(Arrays.asList("foo", "fridge")));
-        Assert.assertEquals(new HashSet<>(keyValueMap.values()), new HashSet<String>(Arrays.asList("/bar/zzz.text", "cookie")));
+        Assert.assertEquals(new HashSet<>(keyValueMap.values()), new HashSet<String>(Arrays.asList("/bar/zzz1.text", "cookie")));
     }
 
 }

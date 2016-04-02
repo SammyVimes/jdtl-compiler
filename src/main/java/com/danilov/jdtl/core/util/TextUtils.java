@@ -16,7 +16,7 @@ public class TextUtils {
         int idx = -1;
         int i = 0;
         String result = text;
-        while ((idx = text.indexOf("{}")) != -1) {
+        while ((idx = result.indexOf("{}")) != -1) {
             if (i > params.length - 1) {
                 throw new ArrayIndexOutOfBoundsException("Arguments quantity doesn't match template");
             }

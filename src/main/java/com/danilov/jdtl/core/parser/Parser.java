@@ -1,6 +1,7 @@
 package com.danilov.jdtl.core.parser;
 
 import com.danilov.jdtl.core.context.Context;
+import com.danilov.jdtl.core.function.GoogleImage;
 import com.danilov.jdtl.core.function.IFunction;
 import com.danilov.jdtl.core.function.Image;
 import com.danilov.jdtl.core.function.Include;
@@ -27,6 +28,7 @@ public class Parser {
         this.context = context;
         functions.add(new Image());
         functions.add(new Include());
+        functions.add(new GoogleImage());
     }
 
     public void parse(final InputStream file, final OutputStream outputStream) {

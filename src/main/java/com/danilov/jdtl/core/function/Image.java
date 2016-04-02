@@ -1,6 +1,7 @@
 package com.danilov.jdtl.core.function;
 
 import com.danilov.jdtl.core.context.Context;
+import com.danilov.jdtl.core.util.TextUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -37,11 +38,12 @@ public class Image extends BaseFunction {
     public String process(@Nonnull final Map<String, String> args, @Nonnull final Context context) {
         final String filePath = args.get(FILE);
         String localValue = args.get(LOCAL);
+
+        final String htmlImg = "<img src=\"{}\"/>";
+
         boolean isLocal = Boolean.valueOf(localValue);
-        if (isLocal) {
-            return context.getLocalPath(filePath);
-        }
-        return filePath;
+        String path = isLocal ? context.getLocalPath(filePath) : filePath;
+        return TextUtils.format(htmlImg, path);
     }
 
 }
